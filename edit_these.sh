@@ -23,16 +23,20 @@ export TMUX_SESSION="Newznab-dev"
 export MONITOR_UPDATE="20"
 
 #Set, in seconds - how long the update_binaries should sleep between runs, 0 may cause errors
+#top right pane
 export NNTP_SLEEP="20"
 
 #Set, in seconds - how long the backfill should sleep between runs, 0 may cause errors
+#below update_binaries
 export BACKFILL_SLEEP="20"
 
-#Set, in seconds - how long the update_release should sleep between runs, 0 may cause errors
-export RELEASES_SLEEP="20"
-
 #Set, in seconds - how long the nzb-import should sleep between runs, 0 may cause errors
+#below backfill
 export IMPORT_SLEEP="20"
+
+#Set, in seconds - how long the update_release should sleep between runs, 0 may cause errors
+#bottom right
+export RELEASES_SLEEP="20"
 
 #Set the maximum days to backfill, you set the nn+ admin/edit backfill to 1
 #this will increment your database by 1 after each backfill loop
@@ -95,13 +99,12 @@ export USE_IOTOP="false"
 export USE_MYTOP="false"
 export USE_VNSTAT="false"
 
-#Each pane may have periods of inactivity, at the time "Pane iis Dead" will be displayed.
+#Each pane may have periods of inactivity, at the time "Pane is Dead" will be displayed.
 #To disable my notes about why this is ok, change to false
 export SHOW_WHY="true"
 
 #By using this script you understand that the programmer is not responsible for any loss of data, users, or sanity.
 #You also agree that you were smart enough to make a backup of your database and files. Do you agree? yes/no
-
 export AGREED="no"
 
 ##END OF EDITS##
