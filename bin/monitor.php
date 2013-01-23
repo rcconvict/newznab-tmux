@@ -320,9 +320,9 @@ while($i>0)
   }
   if ( $_import == "true" ) {
     if (( $total_work_now < $_import_max_releases ) || ( $_import_max_releases == 0 )) {
-      shell_exec("tmux respawnp -t $_tmux_session:0.14 'echo \"\033[1;36m\" && cd bin && $_php nzb-import.php \"$_nzbs\" true && date && echo \"$_sleep_string $_import_sleep seconds...\" && sleep $_import_sleep && echo \"$_string\"' 2>&1 1> /dev/null");
+      shell_exec("tmux respawnp -t $_tmux_session:0.14 'echo \"\033[1;36m\" && cd bin && $_php nzb-import.php \"$_nzbs\" true && echo \" \" && date && echo \"$_sleep_string $_import_sleep seconds...\" && sleep $_import_sleep && echo \"$_string\"' 2>&1 1> /dev/null");
     } else {
-      shell_exec("tmux respawnp -t $_tmux_session:0.14 'echo \"$_string2\"' 2>&1 1> /dev/null");
+      shell_exec("tmux respawnp -t $_tmux_session:0.14 'echo \"\n$_string2\"' 2>&1 1> /dev/null");
     }
   }
   if ( $_optimise == "true" ) {
