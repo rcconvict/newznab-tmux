@@ -62,7 +62,7 @@ export INNODB="true"
 export CLEANUP="false"
 
 #Choose to run update_parsing.php true/false
-#set to false by default, you will need to edit /misc/testing/removespecial.php
+#set to false by default, you will need to edit /misc/testing/update_parsing.php
 #to actually do anything, directions are in the file
 export PARSING="false"
 
