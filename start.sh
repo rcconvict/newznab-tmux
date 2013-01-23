@@ -25,7 +25,7 @@ fi
 #echo $NEWZPATH/lib
 
 #remove postprocessing scripts
-rm -f bin/lib/*
+rm -f bin/lib/post*
 
 #create postprocessing scripts
 cp $NEWZPATH/www/lib/postprocess.php bin/lib/postprocess2.php
@@ -88,10 +88,13 @@ $TMUX splitw -v -p 67 'echo "..."'
 $TMUX splitw -v -p 50 'echo "..."'
 $TMUX new-window -n cleanup 'echo "..."'
 $TMUX selectp -t 0
+$TMUX splitw -h -p 67 'echo "..."'
 $TMUX splitw -h -p 50 'echo "..."'
 $TMUX selectp -t 0
 $TMUX splitw -v -p 50 'echo "..."'
 $TMUX selectp -t 2
+$TMUX splitw -v -p 50 'echo "..."'
+$TMUX selectp -t 4
 $TMUX splitw -v -p 50 'echo "..."'
 
 if [[ $USE_HTOP == "true" ]]; then

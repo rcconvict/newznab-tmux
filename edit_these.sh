@@ -8,7 +8,7 @@ export NEWZPATH="/var/www/newznab"
 export NEWZNAB_PATH=$NEWZPATH"/misc/update_scripts"
 export TESTING_PATH=$NEWZPATH"/misc/testing"
 export ADMIN_PATH=$NEWZPATH"/www/admin"
-export INNODB_PATH=$DIR"/bin/innodb"
+export CURRENT_DIR=$DIR
 
 #Post Processing Additional is the processing that downloads rar and attempts to get info for your site
 #you are able to set the number of process to be run from 1-12
@@ -56,10 +56,15 @@ export THREADS="true"
 #you should have already converted your database to InnoDB engine, if you select true here
 export INNODB="true"
 
-#Choose to run update_cleanup.php true/false
-#set to false by default, you will need to edit /misc/testing/update_cleanup.php and /misc/testing/update_parsing.php
+#Choose to run update_cleanup.php and removespecial.php true/false
+#set to false by default, you will need to edit /misc/testing/update_cleanup.php and /misc/testing/removespecial.php
 #to actually do anything, directions are in the file
 export CLEANUP="false"
+
+#Choose to run update_parsing.php true/false
+#set to false by default, you will need to edit /misc/testing/removespecial.php
+#to actually do anything, directions are in the file
+export PARSING="false"
 
 #Choose to run update_binaries true/false
 export BINARIES="true"
@@ -72,7 +77,7 @@ export IMPORT="true"
 
 #Choose to run optimise_db script true/false
 #set to false by default, you should test the optimse scripts in bin/innodb first
-export OPTIMISE="true"
+export OPTIMISE="false"
 
 #Set the max amount of unprocessed releases and still allow nzb-import to run
 #set to 0 to disable

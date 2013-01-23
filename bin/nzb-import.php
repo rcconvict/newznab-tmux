@@ -1,7 +1,7 @@
 <?php
 
-require_once("lib/innodb/config.php");
-require_once("lib/framework/db.php");
+require_once("config.php");
+require_once("lib/db.php");
 
 $db = new DB();
 
